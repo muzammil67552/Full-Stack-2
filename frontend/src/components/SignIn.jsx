@@ -10,7 +10,7 @@ const SignIn = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/signin', formData);
+      const res = await axios.post('https://full-stack-2-backend-ruby.vercel.app/signin', formData);
       if (res.data.token) navigate('/home');
     } catch (error) {
       setError('Invalid credentials');

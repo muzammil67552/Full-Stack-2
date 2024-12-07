@@ -9,7 +9,7 @@ const SignUp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/signup', formData);
+      await axios.post('https://full-stack-2-backend-ruby.vercel.app/signup', formData);
       navigate('/home');
     } catch (error) {
       console.error(error.response.data);
